@@ -1351,8 +1351,7 @@ define Device/xiaomi_mi-router-3-pro
   IMAGE/sysupgrade.bin := sysupgrade-tar | append-metadata
   IMAGE/factory.bin := append-kernel | pad-to $$(KERNEL_SIZE) | append-ubi | \
 	check-size
-  DEVICE_PACKAGES := kmod-mt7615e kmod-mt7615-firmware kmod-usb3 \
-	kmod-usb-ledtrig-usbport uboot-envtools
+  DEVICE_PACKAGES := kmod-mt7615e kmod-mt7615-firmware kmod-usb3 uboot-envtools
   SUPPORTED_DEVICES += xiaomi,mir3p
 endef
 TARGET_DEVICES += xiaomi_mi-router-3-pro
@@ -1363,7 +1362,7 @@ define Device/xiaomi_mi-router-3-pro-nor
   IMAGE_SIZE := 16064k
   DEVICE_VENDOR := Xiaomi
   DEVICE_MODEL := Mi Router 3 Pro NOR (16M)
-  DEVICE_PACKAGES := kmod-mt7615e kmod-mt7615-firmware kmod-usb3 kmod-usb-ledtrig-usbport
+  DEVICE_PACKAGES := kmod-mt7615e kmod-mt7615-firmware kmod-usb3
   SUPPORTED_DEVICES += xiaomi,mir3p-nor
 endef
 TARGET_DEVICES += xiaomi_mi-router-3-pro-nor
